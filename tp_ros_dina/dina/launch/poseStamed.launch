@@ -1,0 +1,6 @@
+<launch>
+	<node pkg="dina" name="listener" type="pub.py"/>
+	<node pkg="dina" name="button_state" type="button_node.py"  output="screen"/>
+	<node pkg="dina" name="chatter" type="pub.py" />
+	<node name="rviz" pkg="rviz" type="rviz" args="-d $(find dina)/config/button.rviz" required="true"/>
+</launch>
